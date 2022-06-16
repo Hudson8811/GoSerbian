@@ -1,0 +1,58 @@
+/* src/assets/styles/components/_button.scss  */
+
+
+.btn {
+	border: none;
+	background: none;
+	display: inline-flex;
+	align-items: center;
+	justify-content: center;
+	background: #324DDC;
+	padding: 15px 32px;
+	font-weight: 500;
+	font-size: 20px;
+	line-height: 28px;
+	color: #FFFFFF;
+
+	@include hov();
+
+	&--in-header {
+		border: 2px solid #FFFFFF;
+		font-size: 14px;
+		line-height: 28px;
+		padding: 8px 22px;
+	}
+
+	&--on-blue {
+		font-weight: 500;
+		font-size: 24px;
+		line-height: 28px;
+		padding: 13px 31px;
+		border: 2px solid #FFFFFF;
+	}
+
+	/*
+
+  @extend .clean-button;
+	font-size: 18px;
+	line-height: 158%;
+	text-align: center;
+	color: #FFFFFF;
+	background: #F4A93C linear-gradient(314.85deg, #F4A93C 0%, #F4C03C 100%);
+	border-radius: 100px;
+	padding: 10px 30px;
+	display: inline-block;
+	@include max(md){
+		font-size: vw(18);
+		border-radius: vw(100);
+		padding: vw(10) vw(30);
+	}
+	@include min(md) {
+		&:hover {
+			color: #000000;
+			background: #FEF4E2;
+		}
+	}*/
+}
+
+

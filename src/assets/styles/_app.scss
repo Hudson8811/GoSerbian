@@ -1,0 +1,39 @@
+@import 'normalize.css';
+
+/*
+  Libs
+*/
+
+@import './libs/slick.css';
+@import './libs/aos.css';
+
+/*
+  Base
+*/
+@import './base/fonts';
+
+/*
+  Utils
+*/
+@import 'utils/vars';
+@import './utils/dimensions';
+@import './utils/mixins';
+
+/*
+  Layout
+*/
+@import './layout/general';
+
+/*
+  Components
+*/
+
+@import './components/header';
+@import './components/footer';
+@import './components/button';
+
+
+/*
+  Pages
+*/
+@import './pages/index';
