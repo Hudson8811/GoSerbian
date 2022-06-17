@@ -60,14 +60,14 @@ a {
 
 }
 
+html{
+	scroll-behavior: smooth;
+}
+
 html,
 body {
 }
 
-
-#jGrowl {
-	z-index: 999999;
-}
 
 *:focus {
 	outline: none;
@@ -85,8 +85,10 @@ body {
 	-webkit-locale: auto;
 	white-space: normal;
 
-	&.compensate-for-scrollbar {
-		overflow: hidden;
+	&.menu-opened {
+		@include max(md){
+			overflow: hidden;
+		}
 	}
 }
 
@@ -154,16 +156,15 @@ li {
 
 .container {
 	box-sizing: border-box;
-	//@at-root: 981px;
 	width: 1280px;
 	max-width: 95%;
-	max-width: calc(100% - 30px * 2);
+	max-width: calc(100% - 20px * 2);
 	margin: 0 auto;
 
-	@media screen and (max-width: 800px) {
-		.container {
-			max-width: calc(100% - 15px * 2);
-		}
+	@include max(sm){
+		max-width: 100%;
+		width: 100%;
+		padding: 0 vw(16);
 	}
 }
 

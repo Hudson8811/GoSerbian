@@ -1,0 +1,55 @@
+.form{
+	&__input{
+		input{
+			width: 100%;
+			font-family: $mainfont;
+			font-weight: 500;
+			font-size: 20px;
+			line-height: 1;
+			color: #000000;
+			text-indent: 20px;
+			height: 59px;
+			border: 2px solid #000000;
+			@include max(sm){
+				font-size: vw(20);
+				text-indent: vw(20);
+				height: vw(59);
+			}
+			&::placeholder{
+				font-family: $mainfont;
+				font-weight: 500;
+				font-size: 20px;
+				line-height: 1;
+				color: #000000;
+				opacity: 0.4;
+				@include max(sm){
+					font-size: vw(20);
+				}
+			}
+			&:focus{
+				border-color: #324DDC;
+			}
+		}
+	}
+	&__btn{}
+
+	&--vertical{
+		.form{
+			&__input{
+				&:not(:last-child){
+					margin-top: 20px;
+					@include max(sm){
+						margin-top: vw(20);
+					}
+				}
+			}
+			&__btn{
+				width: 100%;
+				margin-top: 28px;
+				@include max(sm){
+					margin-top: vw(28);
+				}
+			}
+		}
+	}
+}

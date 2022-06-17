@@ -19,11 +19,13 @@ block content
 					img(src=require('images/map_hero.svg'), alt="")
 				h1.hero-info__title Комплексная <span style="color: #324DDC;">помощь в&nbsp;релокации бизнеса</span> в Сербию
 				.hero-info__desc Сопровождение от первичного аудита компании до получения ВНЖ сотрудниками при необходимости
-				.hero-info__btn-wrap
-					a.btn(href="") Получить консультацию
 
-			.hero-picture
-				img(src=require('images/hero.svg') , alt="")
+				.hero-picture
+					img(src=require('images/hero.svg') , alt="")
+
+				.hero-info__btn-wrap
+					a.btn(href="#ask") Получить консультацию
+
 
 
 	section.advantages
@@ -113,7 +115,7 @@ block content
 		.container
 			.possibility__text Каждый из описанных вариантов <span>дает&nbsp;возможность</span> индивидуальному предпринимателю, собственнику бизнеса и его сотрудникам оформить документы на ВНЖ, а в будущем — претендовать на гражданство Сербии.
 			.possibility__btn-wrap
-				.btn.btn--on-blue Запросить консультацию
+				a.btn.btn--on-blue(href="#ask") Запросить консультацию
 
 	section.reasons
 		.container
@@ -165,441 +167,39 @@ block content
 					img(src=require('images/info-icon.svg'), alt="")
 				.important__text Кроме того, страна подала заявку на вступление в ЕС. Если она будет одобрена, сербский ВНЖ может стать «окном в Европу».
 
-	section.we-help
+	//-section.we-help
 		.container
 			h2.section-title Порядок и условия сотрудничества
 			.section-desc Заранее рассказываем о плане действий от старта до результата, держим вас в курсе происходящего и работаем по проверенной схеме:
 
 
 
+	section.konsul
+		.container.konsul__container
+			h2.section-title.konsul__title Консультируйтесь у единомышленников с&nbsp;опытом работы в Сербии от 5 лет
+			.section-desc.konsul__desc Название компании — надежный помощник в вопросах связанных с обустройством жизни и предпринимательской деятельности в Сербии. В штате компании более 10 сотрудников — юристы, бухгалтеры, HR-специалисты. Треть из них в свое время также переехала из России. Знаем проблему изнутри и умеем решать ее в короткие сроки.
+			.konsul__flex
+				.konsul__item
+					.konsul__number 3
+					.konsul__text среднее время	<br>регистрации фирмы.
+				.konsul__item
+					.konsul__number 2
+					.konsul__text средний срок <br>получения карты.
+				.konsul__item
+					.konsul__number 20
+					.konsul__text средний срок <br>получения ВНЖ.
+			.konsul__bottom Деловые знакомства и положительная репутация позволяют ускорить любой процесс и избежать бюрократических проволочек.
 
-	//
-		section.hero
-			.container.hero__container
-				.hero__content
-					h1.hero__title Сервис поиска ответственных исполнителей
-					.hero__text Только верифицированные специалисты из 40+ областей со страховкой до 100,000 динар и опытом от 2х лех
-					.hero__image
-						img(src=require('images/hero.png') alt="")
-					.hero__bottom
-						a.btn.hero__btn(href="") Искать
-						.hero__question Кто вам нужен?
-
-
-
-		section.advantages
-			.container.advantages__container
-				.advantages__row
-					.advantages__advantage.advantage
-						.advantage__icon
-							img(src=require('images/why-1.svg') alt="")
-						.advantage__label Штатные <br>сотрудники компании
-					.advantages__advantage.advantage
-						.advantage__icon
-							img(src=require('images/why-2.svg') alt="")
-						.advantage__label Доступ и <br>техподдержка 24/7
-					.advantages__advantage.advantage
-						.advantage__icon
-							img(src=require('images/why-3.svg') alt="")
-						.advantage__label Интуитивно <br>понятный интерфейс
-					.advantages__advantage.advantage
-						.advantage__icon
-							img(src=require('images/why-4.svg') alt="")
-						.advantage__label Более 3000 <br>профкссионалов в базе
-
-
-
-
-		section.specialists
-			.container.specialists__container
-				.specialists__pretitle 1040 Предожений за 24 часа
-				h2.specialists__title Популярные специалисты и категории
-				.specialists__categories.categories
-					.categories__inner
-						.categories__nav.categories__nav--left.js-prev-category
-						.categories__list
-							.categories__category.category.category--active.js-set-category(data-id="1")
-								.category__inner
-									.category__icon
-										img(src=require('images/cat-1.svg'))
-									.category__label Уборка
-							.categories__category.category.js-set-category(data-id="2")
-								.category__inner
-									.category__icon
-										img(src=require('images/cat-2.svg'))
-									.category__label Ремонт техники
-							.categories__category.category.js-set-category(data-id="3")
-								.category__inner
-									.category__icon
-										img(src=require('images/cat-3.svg'))
-									.category__label Финансы
-							.categories__category.category.js-set-category(data-id="4")
-								.category__inner
-									.category__icon
-										img(src=require('images/cat-4.svg'))
-									.category__label Фотография
-							.categories__category.category.js-set-category(data-id="5")
-								.category__inner
-									.category__icon
-										img(src=require('images/cat-5.svg'))
-									.category__label Репетитор
-						.categories__nav.categories__nav--right.js-next-category
-				.specialists__items
-
-					.specialists__item.specialist.specialist--active(data-id="1")
-						.specialist__top
-							.specialist__avatar
-								img(src=require('images/avatar-2.png') alt="")
-							.specialist__info
-								.specialist__name Cooper Lipshutz
-								.specialist__category Категория
-						.specialist__bottom
-							.specialist__text Lorem ipsum dolor sit amet, consectetur adipiscing elit. Viverra nunc ante velit vitae. Est tellus vitae.
-							a.specialist__btn.btn(href="") Подробнее
-					.specialists__item.specialist.specialist--active.specialist--center(data-id="1")
-						.specialist__top
-							.specialist__avatar
-								img(src=require('images/avatar.png') alt="")
-							.specialist__info
-								.specialist__name Cooper Lipshutz
-								.specialist__category Категория
-						.specialist__bottom
-							.specialist__text Lorem ipsum dolor sit amet, consectetur adipiscing elit. Viverra nunc ante velit vitae. Est tellus vitae.
-							a.specialist__btn.btn(href="") Подробнее
-					.specialists__item.specialist.specialist--active(data-id="1")
-						.specialist__top
-							.specialist__avatar
-								img(src=require('images/avatar-3.png') alt="")
-							.specialist__info
-								.specialist__name Cooper Lipshutz
-								.specialist__category Категория
-						.specialist__bottom
-							.specialist__text Lorem ipsum dolor sit amet, consectetur adipiscing elit. Viverra nunc ante velit vitae. Est tellus vitae.
-							a.specialist__btn.btn(href="") Подробнее
-
-					.specialists__item.specialist(data-id="2")
-						.specialist__top
-							.specialist__avatar
-								img(src=require('images/avatar.png') alt="")
-							.specialist__info
-								.specialist__name Cooper Lipshutz2
-								.specialist__category Категория
-						.specialist__bottom
-							.specialist__text Lorem ipsum dolor sit amet, consectetur adipiscing elit. Viverra nunc ante velit vitae. Est tellus vitae.
-							a.specialist__btn.btn(href="") Подробнее
-					.specialists__item.specialist.specialist--center(data-id="2")
-						.specialist__top
-							.specialist__avatar
-								img(src=require('images/avatar.png') alt="")
-							.specialist__info
-								.specialist__name Cooper Lipshutz2
-								.specialist__category Категория
-						.specialist__bottom
-							.specialist__text Lorem ipsum dolor sit amet, consectetur adipiscing elit. Viverra nunc ante velit vitae. Est tellus vitae.
-							a.specialist__btn.btn(href="") Подробнее
-					.specialists__item.specialist(data-id="2")
-						.specialist__top
-							.specialist__avatar
-								img(src=require('images/avatar.png') alt="")
-							.specialist__info
-								.specialist__name Cooper Lipshutz2
-								.specialist__category Категория
-						.specialist__bottom
-							.specialist__text Lorem ipsum dolor sit amet, consectetur adipiscing elit. Viverra nunc ante velit vitae. Est tellus vitae.
-							a.specialist__btn.btn(href="") Подробнее
-
-					.specialists__item.specialist(data-id="3")
-						.specialist__top
-							.specialist__avatar
-								img(src=require('images/avatar.png') alt="")
-							.specialist__info
-								.specialist__name Cooper Lipshutz3
-								.specialist__category Категория
-						.specialist__bottom
-							.specialist__text Lorem ipsum dolor sit amet, consectetur adipiscing elit. Viverra nunc ante velit vitae. Est tellus vitae.
-							a.specialist__btn.btn(href="") Подробнее
-					.specialists__item.specialist.specialist--center(data-id="3")
-						.specialist__top
-							.specialist__avatar
-								img(src=require('images/avatar.png') alt="")
-							.specialist__info
-								.specialist__name Cooper Lipshutz3
-								.specialist__category Категория
-						.specialist__bottom
-							.specialist__text Lorem ipsum dolor sit amet, consectetur adipiscing elit. Viverra nunc ante velit vitae. Est tellus vitae.
-							a.specialist__btn.btn(href="") Подробнее
-					.specialists__item.specialist(data-id="3")
-						.specialist__top
-							.specialist__avatar
-								img(src=require('images/avatar.png') alt="")
-							.specialist__info
-								.specialist__name Cooper Lipshutz3
-								.specialist__category Категория
-						.specialist__bottom
-							.specialist__text Lorem ipsum dolor sit amet, consectetur adipiscing elit. Viverra nunc ante velit vitae. Est tellus vitae.
-							a.specialist__btn.btn(href="") Подробнее
-
-					.specialists__item.specialist(data-id="4")
-						.specialist__top
-							.specialist__avatar
-								img(src=require('images/avatar.png') alt="")
-							.specialist__info
-								.specialist__name Cooper Lipshutz4
-								.specialist__category Категория
-						.specialist__bottom
-							.specialist__text Lorem ipsum dolor sit amet, consectetur adipiscing elit. Viverra nunc ante velit vitae. Est tellus vitae.
-							a.specialist__btn.btn(href="") Подробнее
-					.specialists__item.specialist.specialist--center(data-id="4")
-						.specialist__top
-							.specialist__avatar
-								img(src=require('images/avatar.png') alt="")
-							.specialist__info
-								.specialist__name Cooper Lipshutz4
-								.specialist__category Категория
-						.specialist__bottom
-							.specialist__text Lorem ipsum dolor sit amet, consectetur adipiscing elit. Viverra nunc ante velit vitae. Est tellus vitae.
-							a.specialist__btn.btn(href="") Подробнее
-					.specialists__item.specialist(data-id="4")
-						.specialist__top
-							.specialist__avatar
-								img(src=require('images/avatar.png') alt="")
-							.specialist__info
-								.specialist__name Cooper Lipshutz4
-								.specialist__category Категория
-						.specialist__bottom
-							.specialist__text Lorem ipsum dolor sit amet, consectetur adipiscing elit. Viverra nunc ante velit vitae. Est tellus vitae.
-							a.specialist__btn.btn(href="") Подробнее
-
-					.specialists__item.specialist(data-id="5")
-						.specialist__top
-							.specialist__avatar
-								img(src=require('images/avatar.png') alt="")
-							.specialist__info
-								.specialist__name Cooper Lipshutz5
-								.specialist__category Категория
-						.specialist__bottom
-							.specialist__text Lorem ipsum dolor sit amet, consectetur adipiscing elit. Viverra nunc ante velit vitae. Est tellus vitae.
-							a.specialist__btn.btn(href="") Подробнее
-					.specialists__item.specialist.specialist--center(data-id="5")
-						.specialist__top
-							.specialist__avatar
-								img(src=require('images/avatar.png') alt="")
-							.specialist__info
-								.specialist__name Cooper Lipshutz5
-								.specialist__category Категория
-						.specialist__bottom
-							.specialist__text Lorem ipsum dolor sit amet, consectetur adipiscing elit. Viverra nunc ante velit vitae. Est tellus vitae.
-							a.specialist__btn.btn(href="") Подробнее
-					.specialists__item.specialist(data-id="5")
-						.specialist__top
-							.specialist__avatar
-								img(src=require('images/avatar.png') alt="")
-							.specialist__info
-								.specialist__name Cooper Lipshutz5
-								.specialist__category Категория
-						.specialist__bottom
-							.specialist__text Lorem ipsum dolor sit amet, consectetur adipiscing elit. Viverra nunc ante velit vitae. Est tellus vitae.
-							a.specialist__btn.btn(href="") Подробнее
-
-
-		section.frendly
-			.container.frendly__container
-				.frendly__pretitle Работа в приложении проста на раз-два-три
-				h2.frendly__title UradiTo: Дружественный интерфейс понятный с первого использования
-				.frendly__text Платформа создана так, чтобы вы начали работу с ней сразу же после скачивания. Никаких сложных алгоритмов, спрятанных разделов и длительного поиска - все продумано так, чтобы выбор исполнителя занял несколько минут
-				a.frendly__btn.btn(href="") Попробовать
-				.frendly__steps.steps
-					.steps__step.step
-						.step__dot
-						.step__number 1
-						.step__row
-							.step__image
-								img(src=require('images/step-1.svg') alt="")
-							.step__info
-								.step__title Скачайте и регистрируйтесь на платформе
-								.step__text Заполните данные, чтобы исполнитель <br>мог оперативно связаться с вами
-					.steps__step.step
-						.step__dot
-						.step__number 2
-						.step__row
-							.step__image
-								img(src=require('images/step-2.svg') alt="")
-							.step__info
-								.step__title Выбирайте специалиста в каталоге
-								.step__text Используйте нужный раздел, поиск <br>и фильтрацию для поиска идеального варианта
-					.steps__step.step
-						.step__dot
-						.step__number 3
-						.step__row
-							.step__image
-								img(src=require('images/step-3.svg') alt="")
-							.step__info
-								.step__title Оставляйте заказ и ждите выполнения
-								.step__text Нажимайте на кнопку заказать, чтобы <br>выбранный исполнитель помог решить ваш запрос
-					.steps__line
-
-
-		section.finder
-			.container.finder__container
-				.finder__inner
-					.finder__image
-						picture
-							source(srcset=require('images/bg-find-mobile.jpg') media="(max-width: 767px)")
-							img(src=require('images/bg-find.jpg') alt="")
-					h2.finder__title Найдите исполнителя
-					.finder__text Оцените удобство приложения
-					a.finder__btn.btn Скачать приложение
-
-
-		section.insurance
-			.container.insurance__container
-				.insurance__inner
-					.insurance__image
-						img(src=require('images/pig.svg') alt="")
-					.insurance__info
-						.insurance__title Все работы застрахованы:	<br>компенсируем ущерб <br>в неприятных ситуациях
-						.insurance__text Сотрудники каждой компании имеют огромное преимущество перед фрилансерами - все их работы застрахованы. В случае возникновения поломок, испорченных вещей или других неприятностей, вам будет компенсирован весь нанесенный ущерб. <br><br>Компания и их исполнители застрахованы в ведущих известных организациях, отвечающих за свою репутацию. Вы и ваше имущество будет в полной безопасности
-
-
-
-		section.garants
-			.container.garants__container
-				.garants__inner
-					.garants__title Личная ответственность профессионала <br>и гарантии от компаний
-					.garants__text UradiTo - сервис, где вы найдете исполнителя, но получите сервис компаний. <br>Больше преимущества для вас:
-					.garants__slider
-						.garants__slide.garant
-							.garant__icon
-								img(src=require('images/garant-1.svg') alt="")
-							.garant__title Безопасные платежи
-							.garant__text Оплачивайте столько, сколько было укзано <br>в заявке с помощью банковской карты
-						.garants__slide.garant
-							.garant__icon
-								img(src=require('images/garant-1.svg') alt="")
-							.garant__title Страховка
-							.garant__text Lorem ipsum dolor sit amet, consectetur adipiscing elit. Viverra nunc ante velit vitae. Est tellus vitae, nullam lobortis enim. Faucibus amet etiam tincidunt rhoncus, ullamcorper velit.
-						.garants__slide.garant
-							.garant__icon
-								img(src=require('images/garant-1.svg') alt="")
-							.garant__title Безопасные платежи
-							.garant__text Lorem ipsum dolor sit amet, consectetur adipiscing elit. Viverra nunc ante velit vitae. Est tellus vitae, nullam lobortis enim. Faucibus amet etiam tincidunt rhoncus, ullamcorper velit.
-						.garants__slide.garant
-							.garant__icon
-								img(src=require('images/garant-1.svg') alt="")
-							.garant__title Страховка
-							.garant__text Оплачивайте столько, сколько было укзано <br>в заявке с помощью банковской карты
-						.garants__slide.garant
-							.garant__icon
-								img(src=require('images/garant-1.svg') alt="")
-							.garant__title Безопасные платежи
-							.garant__text Оплачивайте столько, сколько было укзано <br>в заявке с помощью банковской карты
-					.garants__comment Оцените преимущества конкретного специалиста, но с поддержкой целой компании. Скачивайте приложение и выбирайте нужного исполнителя
-
-
-		section.profit
-			.container.profit__container
-				.profit__title Заказчики услуг о пользе сервиса
-				.profit__text Приложение UradiTo рекомендуют, его скачивают каждый день сотни раз и находят исполнителей для выполнения разного вида работ. Оцените удобство сервиса, экономьте часы на поиски и освобождайте время для действительно важных дел. <br>Те, кто уже использует приложение, активно делятся впечателниями, вот лишь некоторые из них:
-				.profit__image
-					img(src=require('images/prof.jpg') alt="")
-
-
-		section.audios
-			.container.audios__container
-				.audios__inner
-					.audios__item.audio
-						.audio__top
-							.audio__avatar
-								img(src=require('images/avatar-4.png') alt="")
-							.audio__info
-								.audio__name Cooper Lipshutz
-								.audio__category Категория
-						.audio__player.js-audio-control
-							audio(preload="none")
-								source(src=require('audio/test.mp3') type="audio/mpeg")
-					.audios__item.audio
-						.audio__top
-							.audio__avatar
-								img(src=require('images/avatar-5.png') alt="")
-							.audio__info
-								.audio__name Cooper Lipshutz
-								.audio__category Категория
-						.audio__player.js-audio-control
-							audio(preload="none")
-								source(src=require('audio/test.mp3') type="audio/mpeg")
-					.audios__item.audio
-						.audio__top
-							.audio__avatar
-								img(src=require('images/avatar-6.png') alt="")
-							.audio__info
-								.audio__name Cooper Lipshutz
-								.audio__category Категория
-						.audio__player.js-audio-control
-							audio(preload="none")
-								source(src=require('audio/test.mp3') type="audio/mpeg")
-
-
-		section.reviews
-			.container.reviews__container
-				.reviews__title Отзывы заказчиков
-				.reviews__images
-					.reviews__image.reviews__image--active
-						img(src=require('images/rev-1.png') alt="")
-						img(src=require('images/rev-1.png') alt="")
-					.reviews__image
-						img(src=require('images/rev-2.png') alt="")
-						img(src=require('images/rev-2.png') alt="")
-					.reviews__image
-						img(src=require('images/rev-3.png') alt="")
-						img(src=require('images/rev-3.png') alt="")
-					.reviews__image
-						img(src=require('images/rev-4.png') alt="")
-						img(src=require('images/rev-4.png') alt="")
-					.reviews__image
-						img(src=require('images/rev-5.png') alt="")
-						img(src=require('images/rev-5.png') alt="")
-					.reviews__image
-						img(src=require('images/rev-6.png') alt="")
-						img(src=require('images/rev-6.png') alt="")
-
-				.reviews__slider.r-slider
-					.r-slider__content
-						.r-slider__back
-						.r-slider__items
-							.r-slider__item
-								div
-									p Lorem ipsum dolor sit amet, consectetur adipiscing elit. Viverra nunc ante velit vitae. Est tellus vitaeLorem ipsum dolor sit amet, consectetur adipiscing elit. Viverra nunc ante velit vitae. Est tellus vitae..
-								a.r-slider__btn.btn(href="") Спросить лично
-							.r-slider__item
-								div
-									p Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-								a.r-slider__btn.btn(href="") Спросить лично
-							.r-slider__item
-								div
-									p Viverra nunc ante velit vitae. Est tellus vitaeLorem ipsum dolor sit amet, consectetur adipiscing elit. Viverra nunc ante velit vitae. Est tellus vitae..
-								a.r-slider__btn.btn(href="") Спросить лично
-							.r-slider__item
-								div
-									p Lorem ipsum dolor sit amet, consectetur adipiscing elit. Viverra nunc ante velit vitae.
-								a.r-slider__btn.btn(href="") Спросить лично
-							.r-slider__item
-								div
-									p Lorem ipsum dolor sit amet, consectetur adipiscing elit. Viverra
-								a.r-slider__btn.btn(href="") Спросить лично
-							.r-slider__item
-								div
-									p Lorem ipsum dolor sit amet, consectetur adipiscing elit. Viverra nunc ante velit vitae. Est tellus vitaeLorem ipsum dolor sit amet, consectetur adipiscing elit. Viverra nunc ante velit vitae. Est tellus vitae..
-								a.r-slider__btn.btn(href="") Спросить лично
-					.r-slider__nav
-						.r-slider__arrow.r-slider__arrow--left.js-review-prev
-						.r-slider__arrow.r-slider__arrow--right.js-review-next
-
-
-		section.downloads
-			.container.downloads__container
-				.downloads__inner
-					.downloads__text <strong>Все специалисты здесь</strong> <br>Поручите работу проверенным исполнителям
-					a.downloads__btn(href="") СКАЧАТЬ
-
-
-
+	section.ask-quest#ask
+			.container.ask-quest__container
+				.ask-quest__flex
+					.ask-quest__img
+					.ask-quest__content
+						.ask-quest__title Задайте вопросы эксперту по Сербии
+						.ask-quest__text начните процедуру релокации с бесплатной консультации
+						form.ask-quest__form.form.form--vertical
+							.form__input
+								input(type="text" name="" placeholder="Ваше имя" required)
+							.form__input
+								input(type="text" name="" placeholder="+7 (000) 000-00-00" required)
+							button.form__btn.btn(type="submit") Задать вопрос

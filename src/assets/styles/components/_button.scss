@@ -13,8 +13,13 @@
 	font-size: 20px;
 	line-height: 28px;
 	color: #FFFFFF;
-
+	cursor: pointer;
 	@include hov();
+	@include max(sm){
+		padding: vw(15) vw(32);
+		font-size: vw(20);
+		line-height: vw(28);
+	}
 
 	&--in-header {
 		border: 2px solid #FFFFFF;
@@ -29,30 +34,19 @@
 		line-height: 28px;
 		padding: 13px 31px;
 		border: 2px solid #FFFFFF;
-	}
 
-	/*
-
-  @extend .clean-button;
-	font-size: 18px;
-	line-height: 158%;
-	text-align: center;
-	color: #FFFFFF;
-	background: #F4A93C linear-gradient(314.85deg, #F4A93C 0%, #F4C03C 100%);
-	border-radius: 100px;
-	padding: 10px 30px;
-	display: inline-block;
-	@include max(md){
-		font-size: vw(18);
-		border-radius: vw(100);
-		padding: vw(10) vw(30);
-	}
-	@include min(md) {
-		&:hover {
-			color: #000000;
-			background: #FEF4E2;
+		@include max(sm){
+			font-size: vw(24);
+			line-height: vw(28);
+			padding: vw(13) vw(22);
 		}
-	}*/
+	}
+
+	&--white {
+		color: #324DDC;
+		background: #ffffff;
+	}
+
 }
 
 

@@ -1,2 +1,57 @@
 //- src/views/components/footer.pug
 
+.footer
+	.container.footer__container
+		.footer__flex
+			.footer__left
+				.footer__title Закажите бесплатный аудит компании
+				.footer__text Узнайте сколько времени займет релокация в вашем случае
+			.footer__right
+				.footer__text Заполни простую анкету и узнай точную стоимость открытия бизнеса / релокации"
+				a.footer__btn.btn.btn--white(href="#ask") Заказать бесплатный аудит
+
+		.footer__flex
+			.footer__left
+				.footer__cols
+					.footer__col
+						.footer__col-title Соцсети
+						.footer__col-content.footer__col-content--social
+							.footer__social
+								a(href="" rel="nofollow")
+									img(src=require('images/footer-wa.svg'), alt="russia")
+									span Написать
+							.footer__social
+								a(href="" rel="nofollow")
+									img(src=require('images/footer-tg.svg'), alt="russia")
+									span @GoSerbian
+					.footer__col
+						.footer__col-title Ссылки
+						.footer__col-cotnent
+							.footer__menu
+								.footer__menu-item
+									a(href="") Главная
+								.footer__menu-item
+									a(href="") Почему мы
+								.footer__menu-item
+									a(href="") Возможности
+								.footer__menu-item
+									a(href="") Условия
+
+			.footer__right
+				.footer__countries
+					.footer__country.f-country
+						.f-country__flag
+							img(src=require('images/emojione_flag-for-russia.svg'), alt="russia")
+						.f-country__content
+							.f-country__top
+								.f-country__title Россия
+								a.f-country__tel(href="tel:+381652077356") +381652077356
+							.f-country__bottom Российская Федерация, г. Москва, <br>Павелецкая набережная 2с4, офис 210
+					.footer__country.f-country
+						.f-country__flag
+							img(src=require('images/emojione_flag-for-serbia.svg'), alt="serbia")
+						.f-country__content
+							.f-country__top
+								.f-country__title Сербия
+								a.f-country__tel(href="tel:+381652077356") +381652077356
+							.f-country__bottom Сербия, г. Белград, <br>Гаврила Принципа 43
