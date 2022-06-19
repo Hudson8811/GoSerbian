@@ -709,7 +709,7 @@
 	}
 
 	&__galka {
-		background: url('../images/reasons-galka.svg') no-repeat center center;
+		background: url('@~images/reasons-galka.svg') no-repeat center center;
 		background-size: contain;
 		width: 36px;
 		height: 36px;
@@ -917,7 +917,7 @@
 		height: 42px;
 		display: block;
 		cursor: pointer;
-		background: url('../images/arrow.svg') center center no-repeat;
+		background: url('@~images/arrow.svg') center center no-repeat;
 		background-size: contain;
 		@include max(md){
 			margin: 0;
@@ -1103,7 +1103,7 @@
 	&__arrow{
 		width: 91px;
 		height: 42px;
-		background: url('../images/arrow.svg') center center no-repeat;
+		background: url('@~images/arrow.svg') center center no-repeat;
 		background-size: contain;
 		margin: 19px 0;
 		@include max(md){
@@ -1240,7 +1240,7 @@
 
 .konsul{
 	color: #ffffff;
-	background: url('../images/konsil-bg.jpg') center center no-repeat;
+	background: url('@~images/konsil-bg.jpg') center center no-repeat;
 	background-size: cover;
 	margin-top: 160px;
 	padding: 60px 0 23px;
@@ -1249,7 +1249,7 @@
 	}
 	@include max(sm){
 		padding: vw(50) 0;
-		background-image: url("../images/konsil-bg-mobile.jpg");
+		background-image: url("@~images/konsil-bg-mobile.jpg");
 	}
 	&__container{}
 	&__title{
@@ -1355,7 +1355,7 @@
 	}
 	&__img{
 		width: 875px;
-		background: url("../images/ask-img.jpg") center center no-repeat;
+		background: url("@~images/ask-img.jpg") center center no-repeat;
 		background-size: cover;
 		@include max(sm){
 			display: none;

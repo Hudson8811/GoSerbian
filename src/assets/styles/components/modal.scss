@@ -20,7 +20,7 @@
 		top: 25px;
 		width: 28px;
 		height: 28px;
-		background: url('../images/modal-close.svg') center center no-repeat;
+		background: url('@~images/modal-close.svg') center center no-repeat;
 		background-size: contain;
 
 		@include max(sm){
@@ -182,7 +182,7 @@
 						top: 0;
 						width: 60px;
 						height: 60px;
-						background: url('../images/range-btn.svg') center center no-repeat;
+						background: url('@~images/range-btn.svg') center center no-repeat;
 						background-size: contain;
 						cursor: pointer;
 						@include max(sm){
@@ -197,7 +197,7 @@
 					&-line{
 						height: 100%;
 						top: 0;
-						background: url('../images/range-bg.svg') left center repeat-x;
+						background: url('@~images/range-bg.svg') left center repeat-x;
 						@include max(sm){
 							background-size: 11vw 4px;
 						}
@@ -206,7 +206,7 @@
 						border-radius: 0;
 						height: 100%;
 						top: 0;
-						background: url('../images/range-bg-active.svg') left center repeat-x;
+						background: url('@~images/range-bg-active.svg') left center repeat-x;
 						@include max(sm){
 							background-size: 11vw 4px;
 						}
