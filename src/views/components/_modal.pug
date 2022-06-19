@@ -1,0 +1,64 @@
+.modal.modal--main#mainModal
+	a.modal__close(href="javascript:;" rel="modal:close")
+	form.form#modalForm
+		.modal__title Выберите подходящую ситуацию
+		.modal__radios
+			label.modal__radio
+				input(type="radio" name="type" value="1" checked)
+				span Открыть транизутную (прокси) компанию
+			label.modal__radio
+				input(type="radio" name="type" value="2")
+				span Открыть представительство
+			label.modal__radio
+				input(type="radio" name="type" value="3")
+				span Открыть бизнес с релокацией
+
+		.modal__label Сколько сотрудников будет оформлено в Сербии?
+		.modal__slider
+			.modal__slider-number 1
+			.modal__slider-input
+				input.js-range-slider(type="text" name="count" value="")
+			.modal__slider-number 100+
+
+		.modal__row
+			.modal__row-inputs
+				.form__input
+					input(type="text" name="" placeholder="Ваше имя" required)
+				.form__input
+					input(type="text" name="" placeholder="+7 (000) 000-00-00" required)
+				.form__input
+					input(type="text" name="" placeholder="+7 (000) 000-00-00" required)
+			button.form__btn.btn(type="submit") Отправить
+
+.modal.modal--thanks#thanksModal
+	a.modal__close(href="javascript:;" rel="modal:close")
+	.modal__flex
+		.modal__left
+			img(src=require('images/modal-check.png'), alt="")
+			span Поздравляем, вы сделали первый шаг <br>на пути к Сербии. Остальный шаги мы поможем вам сделать вместе
+		.modal__right
+			.modal__title Спасибо, ваша заявка отправлена!
+
+			.modal__countries
+				.modal__country.m-country
+					.m-country__flag
+						img(src=require('images/emojione_flag-for-serbia.svg'), alt="serbia")
+					.m-country__content
+						a.m-country__tel(href="tel:+381652077356") +381652077356
+						.m-country__bottom Сербия, г. Белград, <br>Гаврила Принципа 43
+				.modal__country.m-country
+					.m-country__flag
+						img(src=require('images/emojione_flag-for-russia.svg'), alt="russia")
+					.m-country__content
+						a.m-country__tel(href="tel:+381652077356") +381652077356
+						.m-country__bottom Российская Федерация, г. Москва, <br>Павелецкая набережная 2с4, офис 210
+
+			button.modal__btn.btn Готово!
+
+			.modal__socials
+				.modal__social
+					a(href="" rel="nofollow")
+						img(src=require('images/modal-soc-wa.svg'), alt="russia")
+				.modal__social
+					a(href="" rel="nofollow")
+						img(src=require('images/modal-soc-tg.svg'), alt="russia")

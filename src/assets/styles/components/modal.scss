@@ -1,0 +1,391 @@
+.modal{
+	background: #FFFFFF;
+	position: relative;
+	max-width: 100%;
+	padding: 52px 60px 44px;
+	width: 1149px;
+
+	@include max(md){
+		padding: 44px 30px;
+	}
+	@include max(sm){
+		padding: vw(35) vw(12) vw(20);
+	}
+
+	&__close{
+		display: block;
+		cursor: pointer;
+		position: absolute;
+		right: 25px;
+		top: 25px;
+		width: 28px;
+		height: 28px;
+		background: url('../images/modal-close.svg') center center no-repeat;
+		background-size: contain;
+
+		@include max(sm){
+			right: vw(15);
+			top: vw(15);
+			width: vw(20);
+			height: vw(20);
+		}
+	}
+
+	&__title{
+		font-weight: 700;
+		font-size: 28px;
+		line-height: 35px;
+
+		@include max(sm){
+			font-size: vw(24);
+			line-height: vw(28);
+		}
+	}
+	&__radios{
+		margin-left: -9px;
+		margin-right: -9px;
+		margin-top: 42px;
+		display: flex;
+		@include max(sm){
+			flex-direction: column;
+			margin: vw(30) 0 0;
+		}
+	}
+	&__radio{
+		display: flex;
+		cursor: pointer;
+		margin: 0 9px;
+		width: calc(33.333% - 18px);
+		@include max(sm){
+			width: 100%;
+			margin: 0;
+			&:not(:first-child){
+				margin-top: vw(10);
+			}
+		}
+		span{
+			font-weight: 400;
+			font-size: 20px;
+			line-height: 24px;
+			color: #000000;
+			border: 1px solid #000000;
+			padding: 28px 34px;
+			@include max(md){
+				padding: 20px 20px;
+				font-size: 16px;
+				line-height: 20px;
+			}
+			@include max(sm){
+				width: 100%;
+				padding: vw(15) vw(15);
+				font-size: vw(16);
+				line-height: vw(20);
+			}
+			&:hover{
+				border-color: #324DDC;
+				color: #324DDC;
+			}
+		}
+		input{
+			display: none;
+			width: 0;
+			height: 0;
+			opacity: 0;
+			&:checked{
+				+span{
+					color: #ffffff;
+					background: #324DDC;
+					border-color: #324DDC;
+				}
+			}
+		}
+	}
+
+	&__label{
+		margin-top: 70px;
+		font-weight: 600;
+		font-size: 20px;
+		line-height: 24px;
+		@include max(sm){
+			margin-top: vw(35);
+			font-size: vw(20);
+			line-height: vw(24);
+		}
+	}
+	&__slider{
+		margin-top: 32px;
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
+		@include max(sm){
+			margin-top: vw(30);
+		}
+		&-number{
+			font-weight: 700;
+			font-size: 44px;
+			line-height: 54px;
+			@include max(sm){
+				font-size: vw(20);
+				line-height: vw(24);
+			}
+		}
+		&-input{
+			height: 60px;
+			margin: 0 24px;
+			flex-grow: 1;
+			@include max(sm){
+				height: vw(40);
+				margin: 0 vw(12);
+			}
+			.irs{
+				height: 100%;
+				.irs{
+					&-min,
+					&-max,
+					&-from,
+					&-to{
+						display: none;
+					}
+
+					&-single{
+						background-color: rgba(#000000,0.8);
+						font-weight: 700;
+						font-size: 12px;
+						line-height: 16px;
+						width: 39px;
+						height: 39px;
+						display: flex;
+						align-items: center;
+						justify-content: center;
+						top: -50px;
+						@include max(sm){
+							font-size: vw(12);
+							line-height: vw(16);
+							width: vw(30);
+							height: vw(30);
+							top: vw(-37);
+						}
+						&::before {
+							bottom: -16px;
+							margin-left: -8px;
+							border: 8px solid transparent;
+							border-top-color: rgba(#000000,0.8);
+							@include max(sm){
+								bottom: vw(-14);
+								margin-left: vw(-7);
+								border-width: vw(7);
+							}
+						}
+					}
+
+					&-handle {
+						top: 0;
+						width: 60px;
+						height: 60px;
+						background: url('../images/range-btn.svg') center center no-repeat;
+						background-size: contain;
+						cursor: pointer;
+						@include max(sm){
+							width: vw(40);
+							height: vw(40);
+						}
+						>i{
+							display: none !important;
+						}
+					}
+
+					&-line{
+						height: 100%;
+						top: 0;
+						background: url('../images/range-bg.svg') left center repeat-x;
+						@include max(sm){
+							background-size: 11vw 4px;
+						}
+					}
+					&-bar {
+						border-radius: 0;
+						height: 100%;
+						top: 0;
+						background: url('../images/range-bg-active.svg') left center repeat-x;
+						@include max(sm){
+							background-size: 11vw 4px;
+						}
+					}
+				}
+			}
+		}
+	}
+
+	&__row{
+		display: flex;
+		justify-content: space-between;
+		margin-top: 49px;
+		@include max(md){
+			display: block;
+		}
+		@include max(sm){
+			margin-top: vw(35);
+		}
+		&-inputs{
+			display: flex;
+			justify-content: space-between;
+			margin-left: -8px;
+			margin-right: -8px;
+			flex-grow: 1;
+			@include max(sm){
+				margin: 0;
+				display: block;
+			}
+			.form__input{
+				margin: 0 8px;
+				width: calc(33.33% - 16px);
+				@include max(sm){
+					margin: 0;
+					width: 100%;
+					&:not(:first-child){
+						margin-top: vw(20);
+					}
+				}
+			}
+		}
+		.form__btn{
+			margin-left: 50px;
+			@include max(md){
+				margin-left: 0;
+				margin-top: 28px;
+				width: 100%;
+			}
+			@include max(sm){
+				margin-top: vw(28);
+			}
+		}
+	}
+
+
+	&__flex {
+		display: flex;
+	}
+
+	&__left{
+		padding: 32px 12px;
+		background: #324DDC;
+		color: #ffffff;
+		display: flex;
+		flex-direction: column;
+		justify-content: space-between;
+		align-items: center;
+		text-align: center;
+		margin-right: 29px;
+		width: 383px;
+		@include max(md){
+			display: none;
+		}
+		span{
+			font-weight: 500;
+			font-size: 25px;
+			line-height: 30px;
+		}
+	}
+
+	&__right{
+		flex-grow: 1;
+	}
+
+
+	&__countries{
+		margin-top: 32px;
+		@include max(sm){
+			margin-top: vw(32);
+		}
+	}
+	&__country{
+		&:not(:first-child){
+			margin-top: 16px;
+		}
+	}
+
+	&__btn{
+		width: 100%;
+		margin-top: 21px;
+		@include max(sm){
+			margin-top: vw(21);
+		}
+	}
+
+	&__socials{
+		display: flex;
+		justify-content: center;
+		margin-top: 17px;
+		@include max(sm){
+			margin-top: vw(17);
+		}
+	}
+
+	&__social{
+		margin: 0 19px;
+		cursor: pointer;
+		@include max(sm){
+			margin: 0 vw(19);
+		}
+		img{
+			width: 43px;
+			height: 43px;
+			object-fit: contain;
+			@include max(sm){
+				width: vw(43);
+				height: vw(43);
+			}
+		}
+	}
+
+
+	&--thanks{
+		@include min(md){
+			padding: 43px 38px 33px;
+			width: 909px;
+		}
+	}
+}
+
+
+.m-country{
+	display: flex;
+	&__flag{
+		flex-shrink: 0;
+		width: 32px;
+		margin-right: 16px;
+		padding-top: 5px;
+		@include max(sm){
+			width: vw(28);
+			margin-right: vw(12);
+			padding-top: vw(5);
+		}
+		img{
+			width: 100%;
+			display: block;
+		}
+	}
+
+	&__content{}
+	&__tel{
+		font-weight: 600;
+		font-size: 14px;
+		line-height: 150%;
+		color: #000000;
+		text-decoration: none;
+		@include max(sm){
+			width: vw(20);
+			margin-right: vw(10);
+			padding-top: vw(10);
+		}
+	}
+	&__bottom{
+		margin-top: 1px;
+		font-size: 16px;
+		line-height: 19px;
+		@include max(sm){
+			font-size: vw(16);
+			line-height: vw(19);
+		}
+	}
+}
