@@ -3,10 +3,10 @@
 .footer{
 	background: #324DDC;
 	margin-top: 60px;
-	padding: 32px 0 60px;
+	padding: 28px 0 60px;
 	@include max(sm){
 		margin-top: vw(60);
-		padding: vw(32) 0 vw(60);
+		padding: vw(28) 0 vw(60);
 	}
 	&__container{
 		position: relative;
@@ -57,7 +57,7 @@
 	}
 	&__right{
 		width: 383px;
-		padding-top: 12px;
+		padding-top: 16px;
 		@include max(md){
 			width: 100%;
 			padding-top: 0;
@@ -78,13 +78,22 @@
 			}
 		}
 	}
+	&__logo{
+		margin-bottom: 16px;
+		@include max(sm){
+			margin-bottom: vw(16);
+			img{
+				width: vw(150);
+			}
+		}
+	}
 	&__title{
 		max-width: 520px;
 		font-weight: 600;
 		font-size: 42px;
-		line-height: 150%;
+		line-height: 132%;
 		color: #FFFFFF;
-		margin-bottom: 17px;
+		margin-bottom: 10px;
 		@include max(sm){
 			max-width: 100%;
 			font-size: vw(32);

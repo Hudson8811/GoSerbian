@@ -57,7 +57,7 @@ block content
 				.important__text Самостоятельный путь дает колоссальный опыт, но занимает много времени и средств. Экономьте энергию на переезде, вкладывайте в развитие на месте.
 
 			.we-help-cards
-				a.we-help-card(href="")
+				a.we-help-card.js-modal(href="javascript:;" data-type="1")
 					.we-help-card__top
 						.we-help-card__name Финансы
 						.we-help-card__icon
@@ -65,7 +65,7 @@ block content
 					.we-help-card__bottom
 						.we-help-card__text Откроем счет и карту для осуществления платежей и переводов, по миру или из/в РФ.
 
-				a.we-help-card(href="")
+				a.we-help-card.js-modal(href="javascript:;" data-type="2")
 					.we-help-card__top
 						.we-help-card__name Бизнес
 						.we-help-card__icon
@@ -73,7 +73,7 @@ block content
 					.we-help-card__bottom
 						.we-help-card__text Поможем зарегистрировать фирму, снять офис, найти персонал и выйти на рынок.
 
-				a.we-help-card(href="")
+				a.we-help-card.js-modal(href="javascript:;" data-type="3")
 					.we-help-card__top
 						.we-help-card__name Релокация
 						.we-help-card__icon
@@ -312,7 +312,7 @@ block content
 						.ask-quest__text начните процедуру релокации с бесплатной консультации
 						form.ask-quest__form.form.form--vertical#askForm
 							.form__input
-								input(type="text" name="" placeholder="Ваше имя" required)
+								input(type="text" name="name" placeholder="Ваше имя" required)
 							.form__input
-								input(type="text" name="" placeholder="+7 (000) 000-00-00" required)
+								input(type="tel" name="phone" required)
 							button.form__btn.btn(type="submit") Задать вопрос

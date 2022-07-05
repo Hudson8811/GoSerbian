@@ -15,6 +15,9 @@
 				text-indent: vw(20);
 				height: vw(59);
 			}
+			&[type=tel]{
+				text-indent: 0;
+			}
 			&::placeholder{
 				font-family: $mainfont;
 				font-weight: 500;
@@ -51,5 +54,12 @@
 				}
 			}
 		}
+	}
+
+
+	.iti__flag {background-image: url("../images/flag/flags.png");}
+
+	@media (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi) {
+		.iti__flag {background-image: url("../images/flag/flags@2x.png");}
 	}
 }

@@ -871,6 +871,7 @@
 			}
 			.o-slider__text{
 				@include min(md){
+					font-size: 35px;
 					max-width: 743px;
 				}
 			}
@@ -963,6 +964,7 @@
 	padding-top: 33px;
 	padding-right: 24px;
 	position: relative;
+	cursor: pointer;
 	@include max(sm){
 		padding-top: vw(33);
 		padding-right: vw(24);
@@ -1044,6 +1046,18 @@
 		}
 	}
 
+	&:not(.step--active):hover{
+		.step{
+			&__arrow{
+				background: #d4dbff;
+				&::before{
+					border-left-color: #d4dbff;
+				}
+			}
+		}
+	}
+
+
 	&--active{
 		.step{
 			&__arrow{
@@ -1054,6 +1068,17 @@
 				span{
 					color: #FFFFFF;
 					opacity: 1;
+				}
+			}
+		}
+		&:hover{
+			.step {
+				&__arrow {
+					background: #263cb1;
+
+					&::before {
+						border-left-color: #263cb1;
+					}
 				}
 			}
 		}

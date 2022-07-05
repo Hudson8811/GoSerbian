@@ -1,7 +1,38 @@
+import intlTelInput from 'intl-tel-input'
+import 'intl-tel-input/build/css/intlTelInput.css'
 import AOS from 'aos'
 import 'aos/dist/aos.css'
 'use strict';
 $(document).ready(function() {
+
+	$('input[type=tel]').each(function (){
+		let elem = this;
+		let telInput = intlTelInput(elem, {
+			preferredCountries: ['ru','rs'],
+			separateDialCode: true,
+			formatOnDisplay: true,
+			initialCountry: "auto",
+			utilsScript : "https://cdnjs.cloudflare.com/ajax/libs/intl-tel-input/17.0.17/js/utils.min.js",
+			autoPlaceholder: "aggressive",
+			geoIpLookup: function(success, failure) {
+				$.get("https://ipinfo.io", function() {}, "jsonp").always(function(resp) {
+					var countryCode = (resp && resp.country) ? resp.country : "ru";
+					success(countryCode);
+				});
+			},
+		});
+
+		$(elem).on('keyup', function(event) {
+			let isValid = telInput.isValidNumber();
+			if (!isValid) {
+				event.preventDefault();
+			}
+		});
+	});
+
+
+
+
 	AOS.init({
 		once: true,
 		offset: 250,
@@ -29,6 +60,13 @@ $(document).ready(function() {
 		$('.o-slider__inner').on('beforeChange', function(event, slick, currentSlide, nextSlide){
 			setActiveStep(nextSlide);
 		});
+
+		$('.step').on('click',function (){
+			event.preventDefault();
+			let index = $(this).index();
+			$('.o-slider__inner').slick('slickGoTo',index);
+		});
+
 
 		function setActiveStep(nextSlide){
 			let steps = $('.steps__inner .step');

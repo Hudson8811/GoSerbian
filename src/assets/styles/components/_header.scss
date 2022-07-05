@@ -82,7 +82,7 @@
 
 .header-logo {
 	margin-right: 36px;
-	@include max(lg){
+	@include max(xl){
 		margin-bottom: 61px;
 	}
 	@include max(md){
@@ -98,7 +98,7 @@
 	display: flex;
 	align-items: center;
 	flex-grow: 1;
-	@include max(lg){
+	@include max(xl){
 		margin-bottom: 61px;
 	}
 	@include max(md){
@@ -156,7 +156,7 @@
 	align-items: center;
 	display: flex;
 	padding: 16px 32px 16px 26px;
-	@include max(lg){
+	@include max(xl){
 		display: block;
 	}
 	@include max(md){
@@ -171,7 +171,7 @@
 	}
 }
 .hcontact-btn{
-	@include max(lg){
+	@include max(xl){
 		width: 100%;
 	}
 	@include max(md){
@@ -184,7 +184,7 @@
 .hcontact-counties {
 	display: flex;
 	align-items: center;
-	@include max(lg) {
+	@include max(xl) {
 		margin-top: 20px;
 	}
 	@include max(sm) {
@@ -196,7 +196,7 @@
 	align-items: center;
 	margin-left: 32px;
 
-	@include max(lg){
+	@include max(xl){
 		&:first-child{
 			margin-left: 0;
 		}
