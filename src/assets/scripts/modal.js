@@ -88,10 +88,12 @@ $(document).ready(function() {
 	let scrollWidth= window.innerWidth-$(document).width();
 	$('#mainModal,#askForm,#modalForm').on($.modal.BEFORE_BLOCK , function(event, modal) {
 		$('.wrapper,.header').css('padding-right',scrollWidth);
+		$('.header-right').css('border-right-width',scrollWidth);
 	});
 
 	$('#mainModal,#askForm,#modalForm').on($.modal.AFTER_CLOSE, function(event, modal) {
 		$('.wrapper,.header').css('padding-right','');
+		$('.header-right').css('border-right-width','');
 	});
 
 

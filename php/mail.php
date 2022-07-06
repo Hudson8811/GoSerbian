@@ -7,8 +7,6 @@ require 'PHPMailer/PHPMailer.php';
 //require 'PHPMailer/SMTP.php';
 
 
-header('Access-Control-Allow-Origin: *');
-
 if (isset($_POST['form']) && in_array($_POST['form'],['ask','modal'])){
 	if ($_POST['form'] === 'ask'){
 		$name = $_POST['name'];
@@ -21,7 +19,7 @@ if (isset($_POST['form']) && in_array($_POST['form'],['ask','modal'])){
 	if ($_POST['form'] === 'modal'){
 		$name = $_POST['name'];
 		$phone = $_POST['phone'];
-		$phone2 = $_POST['phone_2'];
+		$email = $_POST['email'];
 		$count = $_POST['count'];
 		$types = [
 			'1' =>  'Открыть транизутную (прокси) компанию',
@@ -33,7 +31,7 @@ if (isset($_POST['form']) && in_array($_POST['form'],['ask','modal'])){
 		$body = "
 		<p>Имя: {$name}</p>
 		<p>Телефон: {$phone}</p>
-		<p>Телефон 2: {$phone2}</p>
+		<p>Email: {$email}</p>
 		<p>Сотрудников: {$count}</p>
 		<p>Ситуация: {$type}</p>
 		";

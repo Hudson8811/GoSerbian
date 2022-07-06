@@ -188,6 +188,7 @@
 	align-items: center;
 	display: flex;
 	padding: 16px 32px 16px 26px;
+	border-right: 0 solid #324DDC;
 	@include min(md){
 		position: fixed;
 		top: 0;
