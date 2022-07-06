@@ -166,8 +166,12 @@ module.exports = (env) => {
 					{ from: '../manifest.json', to: 'manifest.json' },
 					{ from: '../browserconfig.xml', to: 'browserconfig.xml' },
 					{ from: 'assets/images/favicons/android-chrome-192x192.png', to: 'assets/images/android-chrome-192x192.png' },
-					{ from: 'assets/images/favicons/android-chrome-256x256.png', to: 'assets/images/android-chrome-256x256.png' },
-					{ from: 'assets/images/favicons/mstile-150x150.png', to: 'assets/images/mstile-150x150.png' }
+					{ from: 'assets/images/favicons/android-chrome-512x512.png', to: 'assets/images/android-chrome-512x512.png' },
+					{ from: 'assets/images/favicons/mstile-70x70.png', to: 'assets/images/mstile-70x70.png' },
+					{ from: 'assets/images/favicons/mstile-150x150.png', to: 'assets/images/mstile-150x150.png' },
+					{ from: 'assets/images/favicons/mstile-310x150.png', to: 'assets/images/mstile-310x150.png' },
+					{ from: 'assets/images/favicons/mstile-310x310.png', to: 'assets/images/mstile-310x310.png' },
+					{ from: 'assets/images/favicons/mstile-144x144.png', to: 'assets/images/mstile-144x144.png' }
 				]
 			}),
 			new MiniCssExtractPlugin({

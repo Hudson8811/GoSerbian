@@ -3,10 +3,10 @@
 .footer{
 	background: #324DDC;
 	margin-top: 60px;
-	padding: 28px 0 60px;
+	padding: 28px 0 51px;
 	@include max(sm){
 		margin-top: vw(60);
-		padding: vw(28) 0 vw(60);
+		padding: vw(28) 0 vw(51);
 	}
 	&__container{
 		position: relative;
@@ -318,6 +318,94 @@
 		color: #FFFFFF;
 		@include max(sm){
 			font-size: vw(16);
+		}
+	}
+}
+
+
+.subfooter{
+	background: #2B304E;
+	padding: 25px 0;
+	@include max(sm){
+		padding: vw(25) 0;
+	}
+	&__container{}
+	&__flex{
+		display: flex;
+		align-items: center;
+		justify-content: space-between;
+		@include max(sm){
+			flex-direction: column;
+			align-items: center;
+		}
+	}
+	&__menu{
+		display: flex;
+		align-items: center;
+		@include max(md){
+			flex-direction: column;
+			align-items: flex-start;
+		}
+	}
+	&__link{
+		font-size: 18px;
+		line-height: 150%;
+		color: #FFFFFF;
+		position: relative;
+		display: inline-block;
+		@include max(sm){
+			font-size: vw(18);
+		}
+		&::after {
+			content: "";
+			display: block;
+			width: 100%;
+			height: 1px;
+			position: absolute;
+			left: 0;
+			bottom: 0.15em;
+			background: #ffffff;
+		}
+		&:hover{
+			&::after {
+				display: none;
+			}
+		}
+		&:not(:first-child){
+			margin-left: 20px;
+			@include max(md){
+				margin-left: 0;
+				margin-top: 10px;
+			}
+			@include max(sm){
+				margin-top: vw(10);
+			}
+		}
+	}
+	&__dev{
+		color: #FFFFFF;
+		display: flex;
+		align-items: center;
+		@include max(sm){
+			flex-direction: column;
+			align-items: center;
+			margin-top: vw(30);
+		}
+		span{
+			margin-right: 15px;
+			font-size: 16px;
+			line-height: 1.5;
+			@include max(sm){
+				margin-right: 0;
+				margin-bottom: vw(5);
+				font-size: vw(17);
+			}
+		}
+		img{
+			width: 333px;
+			@include max(sm){
+				width: vw(200);
+			}
 		}
 	}
 }

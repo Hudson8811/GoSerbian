@@ -16,34 +16,37 @@ html(lang='ru')
 
 		//- Basic Seo
 		block basicSeo
-			meta(name='description' content='UradiTo')
-			meta(name='keywords', content='UradiTo, index, page')
-			meta(name='author' content='')
+			meta(name='description' content='Помогаем получить ВНЖ, открыть и вести отчетность для предпринимателей и компани в Сербии. Перевозим сотрудников, помогаем с релокацией. Берем весь документооборот на себя. Ждем вас на Балканах!')
+			//- meta(name='keywords', content='UradiTo, index, page')
+			//- meta(name='author' content='')
 
 		//- Twitter
-		meta(name='twitter:card', content='summary')
-		meta(name='twitter:site', content='')
-		meta(name='twitter:image', content='')
-		meta(name='twitter:description', content='')
+		//- meta(name='twitter:card', content='summary')
+		//- meta(name='twitter:site', content='')
+		//- meta(name='twitter:image', content='')
+		//- meta(name='twitter:description', content='')
 
 		//- Facebook
-		meta(property='og:url', content='')
-		meta(property='og:title', content='')
-		meta(property='og:description', content='')
-		meta(property='og:image', content='')
+		meta(property='og:title' content='GoBalkans – открой бизнес и релоцируйся в Сербию')
+		meta(property='og:image' content='https://gobalkans.me'+require('images/ogimage.png'))
+		meta(property='og:url' content='https://gobalkans.me')
+		meta(property='og:description' content='Помогаем получить ВНЖ, открыть и вести отчетность для предпринимателей и компани в Сербии. Перевозим сотрудников, помогаем с релокацией. Берем весь документооборот на себя. Ждем вас на Балканах!')
 		meta(property='og:type', content='website')
 
 
 		//- Favicons
-		link(rel='apple-touch-icon', sizes='180x180', href=require('images/favicons/apple-touch-icon.png'))
-		link(rel='icon', type='image/png', sizes='32x32', href=require('images/favicons/favicon-32x32.png'))
-		link(rel='icon', type='image/png', sizes='16x16', href=require('images/favicons/favicon-16x16.png'))
+		link(rel='apple-touch-icon' sizes='180x180' href=require('images/favicons/apple-touch-icon.png'))
+		link(rel='icon' type='image/png' sizes='32x32' href=require('images/favicons/favicon-32x32.png'))
+		link(rel='icon' type='image/png' sizes='16x16' href=require('images/favicons/favicon-16x16.png'))
+		link(rel='mask-icon' href=require('images/favicons/safari-pinned-tab.svg') color='#5bbad5')
 		link(rel='shortcut icon', href=require('images/favicons/favicon.ico'))
+		meta(name='msapplication-TileColor' content='#5bbad5')
+		meta(name='theme-color' content='#ffffff')
 
 
 		//- Title
 		block title
-			title GoSerbian
+			title GoBalkans – открой бизнес и релоцируйся в Сербию
 
 		//- Manifest browserconfig files
 		block manifestBrowserconfigFiles
