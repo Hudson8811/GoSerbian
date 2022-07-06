@@ -1,6 +1,7 @@
 'use strict';
 import 'ion-rangeslider'
 import 'ion-rangeslider/css/ion.rangeSlider.css'
+import intlTelInput from "intl-tel-input";
 $(document).ready(function() {
 	$(".js-range-slider").ionRangeSlider({
 		min: 1,
@@ -27,28 +28,70 @@ $(document).ready(function() {
 
 	$('#modalForm').on('submit',function (){
 		event.preventDefault();
-		$('#thanksModal').modal({
-			showClose: false,
-			fadeDuration: 100
+		let validPhone = true;
+		$(this).find('input[type=tel]').each(function (){
+			let elem = this;
+			let telInput = window.intlTelInputGlobals.getInstance(elem);
+			let isValid = telInput.isValidNumber();
+			if (!isValid) validPhone = false;
 		});
+		if (validPhone){
+			let data = $(this).serialize();
+			$.ajax({
+				url: '/php/mail.php',
+				method: 'post',
+				dataType: 'json',
+				data: data,
+				success: function(data){
+					if (data.status === 'ok'){
+						$('#modalForm').clear();
+						$('#thanksModal').modal({
+							showClose: false,
+							fadeDuration: 100
+						});
+					}
+				}
+			});
+		}
 	});
 
 
 	$('#askForm').on('submit',function (){
 		event.preventDefault();
-		$('#thanksModal').modal({
-			showClose: false,
-			fadeDuration: 100
+		let validPhone = true;
+		$(this).find('input[type=tel]').each(function (){
+			let elem = this;
+			let telInput = window.intlTelInputGlobals.getInstance(elem);
+			let isValid = telInput.isValidNumber();
+			if (!isValid) validPhone = false;
 		});
+		if (validPhone){
+			let data = $(this).serialize();
+			$.ajax({
+				url: '/php/mail.php',
+				method: 'post',
+				dataType: 'json',
+				data: data,
+				success: function(data){
+					if (data.status === 'ok'){
+						$('#askForm').clear();
+						$('#thanksModal').modal({
+							showClose: false,
+							fadeDuration: 100
+						});
+					}
+				}
+			});
+		}
 	});
 
 	let scrollWidth= window.innerWidth-$(document).width();
 	$('#mainModal,#askForm,#modalForm').on($.modal.BEFORE_BLOCK , function(event, modal) {
-		$('.wrapper').css('padding-right',scrollWidth);
+		$('.wrapper,.header').css('padding-right',scrollWidth);
 	});
 
 	$('#mainModal,#askForm,#modalForm').on($.modal.AFTER_CLOSE, function(event, modal) {
-		$('.wrapper').css('padding-right','');
+		$('.wrapper,.header').css('padding-right','');
 	});
 
 

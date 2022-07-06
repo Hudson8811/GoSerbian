@@ -22,11 +22,8 @@ $(document).ready(function() {
 			},
 		});
 
-		$(elem).on('keyup', function(event) {
-			let isValid = telInput.isValidNumber();
-			if (!isValid) {
-				event.preventDefault();
-			}
+		$(elem).on('keyup paste change', function() {
+			$(this).val($(this).val().replace(/[A-Za-zА-Яа-яЁё]+/, ''))
 		});
 	});
 
@@ -61,12 +58,27 @@ $(document).ready(function() {
 			setActiveStep(nextSlide);
 		});
 
+		$('.o-slider__inner').on('afterChange', function(event, slick, currentSlide, nextSlide){
+			$('.o-slider__inner .slick-slide').find('.o-slider__item').css('opacity',1);
+		});
+
 		$('.step').on('click',function (){
 			event.preventDefault();
 			let index = $(this).index();
+			let current = $('.o-slider__inner').slick('slickCurrentSlide');
+			if (Math.abs(current - index) > 1){
+				if (index > current){
+					for (var i = current+1; i < index; i++) {
+						$('.o-slider__inner .slick-slide').eq(i).find('.o-slider__item').css('opacity',0);
+					}
+				} else {
+					for (var i = index+1; i < current; i++) {
+						$('.o-slider__inner .slick-slide').eq(i).find('.o-slider__item').css('opacity',0);
+					}
+				}
+			}
 			$('.o-slider__inner').slick('slickGoTo',index);
 		});
-
 
 		function setActiveStep(nextSlide){
 			let steps = $('.steps__inner .step');

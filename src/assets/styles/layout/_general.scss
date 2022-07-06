@@ -137,15 +137,13 @@ li {
 .wrapper{
 	width: 100%;
 	overflow: hidden;
-	//padding-top: 130px;
-	@include max(xl){
+	padding-top: 80px;
 
-	}
-	@include max(lg){
-
-	}
 	@include max(md){
-
+		padding-top: 108px;
+	}
+	@include max(sm){
+		padding-top: vw(64);
 	}
 }
 

@@ -1,11 +1,12 @@
 .header{
-	position:sticky;
+	position:absolute;
 	top: 0;
 	display: block;
 	width: 100%;
 	left: 0;
 	background: #ffffff;
 	z-index: 99;
+
 
 	&__row{
 		@include max(md){
@@ -55,6 +56,40 @@
 			padding: vw(20) 0;
 		}
 	}
+
+
+
+
+
+	&--fixed{
+		position: fixed;
+		border-bottom: 1px solid #324DDC;
+		@include max(lg){
+			border-bottom: 1px solid #324DDC;
+		}
+		@include min(md){
+			transform: translateY(-100%);
+			.header-right{
+				transform: translateY(80px);
+			}
+		}
+	}
+	&--show{
+		@include min(md){
+			transform: translateY(0);
+			.header-right{
+				transform: translateY(0);
+			}
+		}
+	}
+	&--animate{
+		@include min(md){
+			transition: 0.3s ease-in-out;
+			.header-right{
+				transition: 0.3s ease-in-out;
+			}
+		}
+	}
 }
 
 
@@ -83,10 +118,8 @@
 .header-logo {
 	margin-right: 36px;
 	@include max(xl){
-		margin-bottom: 61px;
 	}
 	@include max(md){
-		margin-bottom: 0;
 		margin-right: 0;
 	}
 	img, svg{
@@ -98,11 +131,10 @@
 	display: flex;
 	align-items: center;
 	flex-grow: 1;
-	@include max(xl){
-		margin-bottom: 61px;
-	}
+	height: 80px;
+
 	@include max(md){
-		margin-bottom: 0;
+		height: auto;
 		flex-direction: column;
 		margin-top: 30px;
 		justify-content: center;
@@ -156,6 +188,12 @@
 	align-items: center;
 	display: flex;
 	padding: 16px 32px 16px 26px;
+	@include min(md){
+		position: fixed;
+		top: 0;
+		right: 0;
+		z-index: 99;
+	}
 	@include max(xl){
 		display: block;
 	}
@@ -247,12 +285,6 @@
 			line-height: vw(19);
 		}
 	}
-
-	&:hover {}
-
-	&:active {}
-
-	&:focus {}
 }
 
 
