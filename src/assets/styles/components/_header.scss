@@ -36,12 +36,32 @@
 		cursor: pointer;
 		background: url("@~images/menu.svg") center center no-repeat;
 		background-size: contain;
+		flex-shrink: 0;
 		@include max(sm){
 			width: vw(24);
 			height: vw(24);
 		}
 		&.active{
 			background-image: url("@~images/close.svg");
+		}
+	}
+
+	&__mob{
+		display: flex;
+		align-items: center;
+
+		&-flex{
+			display: flex;
+			flex-grow: 1;
+			justify-content: space-between;
+			align-items: center;
+			margin-left: 35px;
+			@include max(sm){
+				margin-left: vw(20);
+			}
+		}
+		&-logo{
+
 		}
 	}
 
@@ -121,6 +141,7 @@
 	}
 	@include max(md){
 		margin-right: 0;
+		display: none;
 	}
 	img, svg{
 
@@ -136,11 +157,11 @@
 	@include max(md){
 		height: auto;
 		flex-direction: column;
-		margin-top: 30px;
+		padding-top: 30px;
 		justify-content: center;
 	}
 	@include max(sm){
-		margin-top: vw(30);
+		padding-top: vw(30);
 	}
 	&__ul {
 		display: flex;

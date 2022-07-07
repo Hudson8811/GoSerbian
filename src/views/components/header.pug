@@ -1,7 +1,12 @@
 header.header
 	.header--mobile
 		.container
-			.header__burder.js-menu-toogle
+			.header__mob
+				.header__burder.js-menu-toogle
+				.header__mob-flex
+					.header__mob-logo
+						img(src=require('images/header-logo.svg'), alt="logo")
+					a.header__mob-btn.btn.btn--in-header(href="#contacts") Контакты
 	.header__row
 		.container.container--header
 			.header-logo

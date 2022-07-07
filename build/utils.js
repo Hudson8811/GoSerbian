@@ -19,6 +19,9 @@ exports.pages = function (mode, folder = '') {
     if (view.split('.')[1] === undefined)
       return false
 
+	  if (view.split('.')[1] !== 'pug')
+		  return false
+
     const viewName = view.split('.')[0]
     const fileName = folder === '' ? `${viewName}/index.html` : `${folder}/${viewName}/index.html`
     const options = {
